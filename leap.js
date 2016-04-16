@@ -7,9 +7,8 @@ var Year = function(year) {
 Year.prototype.isLeap = function() {
 	var result;
 
-	if(this.year % 4 === 0 && this.year % 100 !== 0) {
-		result = true;
-	} else if (this.year % 4 === 0 && this.year % 100 === 0 && this.year % 400 === 0) {
+	if(this.year % 4 === 0 && this.year % 100 !== 0 ||
+		this.year % 4 === 0 && this.year % 100 === 0 && this.year % 400 === 0) {
 		result = true;
 	} else {
 		result = false;
