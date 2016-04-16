@@ -49,4 +49,29 @@ describe('Leap year', function() {
 
   });
 
+  //lets really test it
+  describe('Additional test for large, small, and negative numbers', function() {
+
+    it('is going to be a leap year', function() {
+      var year = new Year(4000000000000);
+      expect(year.isLeap()).toBe(true);
+    });
+
+    it('was a leap year', function() {
+      var year = new Year(4);
+      expect(year.isLeap()).toBe(true);
+    });
+
+    it('was not a leap year', function() {
+      var year = new Year(-2301);
+      expect(year.isLeap()).toBe(false);
+    });
+
+    it('was a leap year', function() {
+      var year = new Year(-1992);
+      expect(year.isLeap()).toBe(true);
+    });
+
+  });
+
 });
